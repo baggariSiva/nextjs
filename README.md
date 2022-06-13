@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJs example demo CI/CD pipeline
 
-## Getting Started
 
-First, run the development server:
+<a href="https://dash.elest.io/deploy?source=cicd&social=Github&url=https://github.com/elestio-examples/nextjs"><img src="public\deploy-on-elestio.png" alt="Deploy on elest.io" width="180px" /></a>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Example application and CI/CD pipeline showing how to deploy a st website to elestio.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<img src="public\next.png" alt="screenshot of the NextJs app" width="100%" />
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## CI/CD on Elestio
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Fork this repository to create your own copy that you can modify and use in a CI/CD pipeline
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+# Steps to create CI/CD pipeline on elestio
 
-To learn more about Next.js, take a look at the following resources:
+### Step 1: Select CI/CD from left sidebar in app.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Click [here](https://dash.elest.io/deploy?source=cicd) to directly go to the CI/CD
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Step 2: Select Deployment method.
 
-## Deploy on Vercel
+We have three different types of deployment method
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Github
+- Gitlab
+- Docker compose
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+But for these Nextjs website examples, you can choose GitHub as your deployment method.
+
+### Step 3: Authentication
+
+Select Clone in step at step Git Repository and select NextJs template for creating a repository in your git account after that authenticate with Git by clicking on Continue with Github button and authorize elestio to access git then you can rename you repository name if you want.
+
+Else If you forked the repo then you can click on the Continue with GitHub button and authorize elestio to access the git repo then you can select the NextJs repo otherwise you can directly insert a git repo URL to deploy the NextJs App.
+
+### Step 4: Configuration
+
+After selecting a repo or inserting a URL it will auto-filled all the desired configurations using the elestio.yml/elestio.json file.
+
+You can also manually customize the Configure your application, Reverse proxy configuration, and Environment variables.
+
+### Step 5: Choose Deployment Targets
+
+Elestio provides two different types of deployment targets.
+
+- New Infrastructure
+- Existing Infrastructures
+
+On elestio single CI/CD target you can deploy multiple CI/CD pipelines so, If you already have CI/CD target on elestio then you can deploy a new pipeline on the same existing CI/CD target by choosing **Existing Infrastructures** and then select the CI/CD target otherwise if you don't have anything or want to deploy on new target then you can choose **New Infrastructure**
+
+If you choose **New Infrastructure** then you have to select the deployment mode we have two different types of deployment modes.
+
+- Single-mode.
+- Cluster mode.
+
+  **NOTE:-** Steps 6,7,8 and 9 are only for New Infrastructure targets for Existing Infrastructures targets directly following the final step.
+
+### Step 6: Select Service Cloud Provider
+
+Elestio supports five different types of cloud service providers you can choose anyone to deploy your service.
+
+- Hetzner Cloud.
+- Digital Ocean.
+- Amazon Lightsail.
+- Linode.
+- Vultr.
+
+We also provide a BYOVM service option so if you already have your VM on any third-party provider (Azure, GCP, Alibaba, ...) then you can choose BYOVM to deploy CI/CD pipeline on your VM.
+
+Elestio provides one BYOVM service for free. To be eligible the VM you connect must have no more than 2 vCPU, max 4 GB of ram, and max 80 GB of storage
+
+### Step 7: Select Service Plan
+
+This step is only for other than BYOVM service providers.
+
+We're providing multiple different types of service plans as per proposing by your selected providers.
+
+### Step 8: Provide Service Name
+
+By default, we create a unique target name for you but you can customize it.
+
+### Step Final: Create Ci/CD pipeline
+
+Now after following all the above steps you can click on the button **Create Ci/CD pipeline**.
+
+It will take a few seconds to deploy your pipeline on elestio.
+
+For each pipeline deployed on elestio will create a cname for it. but if you want your custom domain then you can configure it inside the target details.
+
