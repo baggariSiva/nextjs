@@ -3,7 +3,7 @@
 
 <a href="https://dash.elest.io/deploy?source=cicd&social=Github&url=https://github.com/elestio-examples/nextjs"><img src="public\deploy-on-elestio.png" alt="Deploy on elest.io" width="180px" /></a>
 
-Example application and CI/CD pipeline showing how to deploy a st website to elestio.
+Example application and CI/CD pipeline showing how to deploy a NextJs website to elestio.
 
 <img src="public\next.png" alt="screenshot of the NextJs app" width="100%" />
 
