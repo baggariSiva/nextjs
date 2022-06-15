@@ -1,7 +1,7 @@
 config:
   runTime: "NodeJs"
   version: ""
-  framework: "NextJs"
+  framework: "Next.js"
   buildCommand: "yarn build"
   buildDir: ".next/"
   runCommand: "yarn start"
