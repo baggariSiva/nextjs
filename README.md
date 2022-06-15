@@ -3,6 +3,26 @@
 
 <a href="https://dash.elest.io/deploy?source=cicd&social=Github&url=https://github.com/elestio-examples/nextjs"><img src="public\deploy-on-elestio.png" alt="Deploy on elest.io" width="180px" /></a>
 
+
+# NextJs!
+
+This is a very basic example of a simple NextJs app.
+
+
+Clone this [elestio-examples/nextjs](https://github.com/elestio-examples/nextjs) 
+
+```
+git clone https://github.com/elestio-examples/nextjs.git
+```
+Change into project directory.
+
+```
+yarn install
+yarn dev
+```
+
+This starts your app in development mode, make the changes and push.
+
 Example application and CI/CD pipeline showing how to deploy a NextJs website to elestio.
 
 <img src="public\next.png" alt="screenshot of the NextJs app" width="100%" />
