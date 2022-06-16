@@ -5,6 +5,7 @@ config:
   buildCommand: "yarn build"
   buildDir: ".next/"
   runCommand: "yarn start"
+  installCommand: "yarn install"
 ports:
   - protocol: "HTTPS"
     targetProtocol: "HTTP"
