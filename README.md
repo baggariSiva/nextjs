@@ -31,7 +31,7 @@ yarn install
 ### Step 4: Run your app in dev mode
 
 ```
-yarn start
+yarn dev
 ```
 
 ### Step 5: Make some changes and push
